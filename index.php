@@ -6,7 +6,7 @@
                 <span data-aos="fade-up" data-aos-duration="500">Rejuvenique</span>
                 <h1 data-aos="fade-up" data-aos-duration="500">Aesthetic & Anti-Aging Clinic in Bali</h1>
                 <p data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
-                <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500"> + make appointment</a>
+                <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
             </div>
         </div>
     </header>
@@ -39,7 +39,7 @@
             </div>
             <div class="owl-carousel owl-theme slider-carousel" data-aos="fade-up" data-aos-duration="500">
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/botox.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -52,7 +52,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/derma-filler.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -65,7 +65,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/thread-lift.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -78,7 +78,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/FACIAL-TREATMENT.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -91,7 +91,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/SKIN-REJUVENATION.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -104,7 +104,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-4 p-md-0">
                         <div class="img-hover">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/Mole-and-skin-tag-removal.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -223,7 +223,7 @@
             </div>
             <div class="owl-carousel owl-theme news" data-aos="fade-up" data-aos-duration="500">
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-1.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -237,7 +237,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-2.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -251,7 +251,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-3.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -265,7 +265,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-4.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -279,7 +279,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-5.jpg" class="w-100" alt="">
                             <div class="overlay">
@@ -293,7 +293,7 @@
                     </div>
                 </a>
                 <a href="" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col mt-md-4 box p-md-0 p-4">
                         <div class="img-hover img-news">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-6.jpg" class="w-100" alt="">
                             <div class="overlay">

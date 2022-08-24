@@ -1,3 +1,37 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header px-5">
+                <h2 class="modal-title" id="exampleModalLabel">Make Appointment</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control py-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control py-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control py-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" class="form-control py-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date">
+                    </div>
+                    <div class="mb-3">
+                        <textarea rows="4" cols="50"  class="form-control py-2" placeholder="Message"></textarea>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit"  class="btn cus-btn-header c-green">+ make appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <a href="#" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>

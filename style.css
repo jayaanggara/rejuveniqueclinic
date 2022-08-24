@@ -87,6 +87,11 @@ a{
   text-decoration: none;
   color: black;
 }
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
 a:hover{
   color: black;
 }
@@ -354,13 +359,28 @@ header p{
     }
     .icon-slider{
         font-size: 45px;
-        background-color: white;
-        top: 0;border-radius: 50%;
+        top: 0;
         width: 50px;
-        height: 50px;
+        height: auto;
         position: relative;
         top: 0;
     }
+    .owl-prev {
+      left: -0px;
+    }
+    
+    .owl-next {
+      right: -0px;
+    }
+    .news .owl-prev {
+      left: -0px !important;
+    }
+    
+    .news .owl-next {
+      right: -0px !important;
+    }
+    
+    
     
 }
 

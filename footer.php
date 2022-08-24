@@ -102,7 +102,6 @@ $('.slider-carousel').owlCarousel({
         0:{
             items:1,
             margin: 10,
-            nav:false
         },
         600:{
             items:2,
@@ -146,12 +145,12 @@ $('.news').owlCarousel({
     loop:true,
     margin:10,
     dots:false,
-    navText: ['<img src="<?php bloginfo('stylesheet_directory');?>/assets/img/left-arrow.png">', '<img src="<?php bloginfo('stylesheet_directory');?>/assets/img/right-arrow.png">'],
+    navText: ['<img class="icon-slider" src="<?php bloginfo('stylesheet_directory');?>/assets/img/left-arrow.png">', '<img class="icon-slider" src="<?php bloginfo('stylesheet_directory');?>/assets/img/right-arrow.png">'],
     responsive:{
         0:{
             items:1,
             margin: 10,
-            nav:false
+            nav:true
         },
         600:{
             items:2,
