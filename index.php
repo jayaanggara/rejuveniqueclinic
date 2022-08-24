@@ -1,12 +1,12 @@
 <?php get_header();?>
 <div class="pt-50">
-    <header class="header-home">
+    <header class="header-home" data-enllax-ratio=".5" data-enllax-direction="vertical">
         <div class="container py-7">
             <div class="col-md-5 container-text">
-                <span>Rejuvenique</span>
-                <h1>Aesthetic & Anti-Aging Clinic in Bali</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
-                <a href="" class="btn cus-btn-header c-green"> + make appointment</a>
+                <span data-aos="fade-up" data-aos-duration="500">Rejuvenique</span>
+                <h1 data-aos="fade-up" data-aos-duration="500">Aesthetic & Anti-Aging Clinic in Bali</h1>
+                <p data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
+                <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500"> + make appointment</a>
             </div>
         </div>
     </header>
@@ -17,11 +17,11 @@
         <div class="row align-items-center g-5">
             <div class="col-md-7">
                 <div class="row">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service1.jpg" alt="" class="col-6 pt-5">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" alt="" class="col-6 pb-5">
+                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service1.jpg" alt="" class="col-6 pt-5" data-aos="fade-up" data-aos-duration="500">
+                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" alt="" class="col-6 pb-5" data-aos="fade-up" data-aos-duration="500">
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="fw-bold">Rejuvenique Aesthetic & Anti-Aging Clinic in Bali</h2>
                 <p class="py-5 mb-0">You will see a difference before and after treatment. Naturally-beautiful results is our goal, just look the same you, just a lot fresher, younger with healthier skin.</p>
                 <p>— Dr. Jeanny Kusumawati</p>
@@ -33,15 +33,15 @@
 <section>
     <div class="container py-5">
         <div class="col-md-10 mx-auto">
-            <div class="ls-20 text-center pb-5">
-                <h2 class="fw-bold fs-50 text-uppercase">OUR<br/> TREATMENTS</h2>
+            <div class="ls-20 text-center pb-5" data-aos="fade-up" data-aos-duration="500">
+                <h2 class="fw-bold fs-50 text-uppercase" >OUR<br/> TREATMENTS</h2>
                 <div class="sparator mx-auto mt-4"></div>
             </div>
-            <div class="owl-carousel owl-theme slider-carousel">
+            <div class="owl-carousel owl-theme slider-carousel" data-aos="fade-up" data-aos-duration="500">
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/botox.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -54,20 +54,20 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/derma-filler.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
                         </div>
                         <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Dermalfiller</h3>
+                            <h3 class="c-blue h5 fw-light text-uppercase">Dermal filler</h3>
                         </div>
                     </div>
                 </a>
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/thread-lift.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -80,7 +80,7 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/FACIAL-TREATMENT.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -93,7 +93,7 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/SKIN-REJUVENATION.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -106,7 +106,7 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/Mole-and-skin-tag-removal.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -126,7 +126,7 @@
 
 <section>
     <div class="container pt-7 pb-5">
-        <div class="row align-items-center pb-5">
+        <div class="row align-items-center pb-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-md-6">
                 <h2 class="fs-50 ls-20">WHAT<br/>THEY SAY ?</h2>
                 <div class="sparator mt-4"></div>
@@ -135,22 +135,24 @@
                 <a class="read-more" href="#" title="">+ see all testimonials</a>
             </div>
         </div>
-        <div>
+        <div data-aos="fade-up" data-aos-duration="500">
             <?php echo do_shortcode('[wprevpro_usetemplate tid="1"]')  ?>
         </div>
     </div>
 </section>
 
-<section class="bg-section">
-    <div class="py-5 vh-70 container position-relative">
-    <h2 class="text-bottom-section fs-50 fw-bold text-uppercase">we will be glad
-    <br>to see you</h2>
+<section>
+    <div class="bg-section">
+        <div class="py-5 vh-70 container position-relative">
+        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase">we will be glad
+        <br>to see you</h2>
+        </div>
     </div>
 </section>
 
 <section>
     <div class="container pt-5 pb-7">
-        <div class="row align-items-center py-5">
+        <div class="row align-items-center py-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-md-6">
                 <h2 class="fs-50 ls-20">SPECIAL<br/>OFFERS</h2>
                 <div class="sparator mt-4"></div>
@@ -159,11 +161,11 @@
                 <a class="read-more" href="#" title="">+ see all special offers</a>
             </div>
         </div>
-        <div class="owl-carousel owl-theme special-offers">
+        <div class="owl-carousel owl-theme special-offers" data-aos="fade-up" data-aos-duration="500">
             <a href="" class="item">
                 <div class="col mt-md-4 box">
                     <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-1.jpg" class="w-100" alt="">
                         <div class="overlay">
                             <span class="text cus-href">find out more</span>
                         </div>
@@ -177,7 +179,7 @@
             <a href="" class="item">
                 <div class="col mt-md-4 box">
                     <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-2.jpg" class="w-100" alt="">
                         <div class="overlay">
                             <span class="text cus-href">find out more</span>
                         </div>
@@ -191,21 +193,7 @@
             <a href="" class="item">
                 <div class="col mt-md-4 box">
                     <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
-                        <div class="overlay">
-                            <span class="text cus-href">find out more</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                        <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="item">
-                <div class="col mt-md-4 box">
-                    <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-3.jpg" class="w-100" alt="">
                         <div class="overlay">
                             <span class="text cus-href">find out more</span>
                         </div>
@@ -224,7 +212,7 @@
 <div class="vl mx-auto"></div>
     <div class="container pb-5 pt-7">
         <div class="col-lg-8 mx-auto">
-            <div class="row align-items-center pb-5">
+            <div class="row align-items-center pb-5" data-aos="fade-up" data-aos-duration="500">
                 <div class="col-md-6">
                     <span class="c-brown h6 fw-bold">News</span>
                     <h2 class="fs-50">Our commitment to your well-being and health</h2>
@@ -233,11 +221,11 @@
                     <a class="read-more" href="#" title="">+ see all news</a>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme news">
+            <div class="owl-carousel owl-theme news" data-aos="fade-up" data-aos-duration="500">
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-1.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -251,7 +239,7 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-2.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -265,7 +253,7 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-3.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -279,7 +267,35 @@
                 <a href="" class="item">
                     <div class="col mt-md-4 box">
                         <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" class="w-100" alt="">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-4.jpg" class="w-100" alt="">
+                            <div class="overlay">
+                                <span class="text cus-href">find out more</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
+                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="item">
+                    <div class="col mt-md-4 box">
+                        <div class="img-hover img-news">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-5.jpg" class="w-100" alt="">
+                            <div class="overlay">
+                                <span class="text cus-href">find out more</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
+                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="item">
+                    <div class="col mt-md-4 box">
+                        <div class="img-hover img-news">
+                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-6.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
                             </div>
@@ -296,7 +312,7 @@
     </div>
 </section>
 
-<section class="pt-7">
+<section class="pt-7" data-aos="fade-up" data-aos-duration="500">
     <div class="rwd-media">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15775.908363190292!2d115.263732!3d-8.693725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdddeea0348344005!2sRejuvenique%20Aesthetics%20Clinic%2C%20Sanur!5e0!3m2!1sid!2sid!4v1660544218397!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
