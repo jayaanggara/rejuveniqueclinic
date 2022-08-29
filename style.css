@@ -85,15 +85,15 @@ body {
 }
 a{
   text-decoration: none;
-  color: black;
+  color: #757B71;
 }
 a:active, a:focus {
   outline: 0;
   border: none;
-  -moz-outline-style: none;
+  --moz-outline-style: none;
 }
 a:hover{
-  color: black;
+  color: #757B71;
 }
 main{
     overflow-x: hidden;
@@ -108,6 +108,9 @@ img{
     padding-bottom: 7em;
 }
 
+.bg-grey{
+  background-color: #E9E9E9 !important;
+}
 .pt-7{
     padding-top: 7em;
 }
@@ -133,8 +136,14 @@ h2{
 .c-brown{
     color: #cdab88;
 }
+p{
+  color: #757B71;
+}
 .pt-50{
     padding-top: 50px;
+}
+.pt-120{
+  padding-top: 130px;
 }
 .bg-green{
     background-color: #515c4e;
@@ -271,6 +280,7 @@ header p{
     margin: 15px 0px;
     padding: 20px;
     border-left: 2px solid;
+    color: white;
 }
 .header-home{
     background-image: url('assets/img/header-home.jpg');
@@ -279,6 +289,13 @@ header p{
     background-repeat: no-repeat;
     background-position: center;
     height: 80vh;
+}
+.header-special{
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
 }
 .cus-btn-header{
     background: #ede6de;
@@ -589,6 +606,43 @@ header p{
     left: 50%;
     top: -50px;
   }
+
+
+/* arhive special offers */
+.carousel-control-prev, .carousel-control-next{
+  width: auto;
+  opacity: 1;
+}
+.carousel-control-prev{
+  left: -25px;
+}
+
+.carousel-control-next{
+  right: -25px;
+}
+
+.carousel-control-prev img, .carousel-control-next img{
+  width: 50px;
+  height: 50px;
+}
+
+/* kontak page */
+.page-kontak-con{
+  position: relative;
+  top: -150px;
+}
+.btn-kontak {
+  background-color: #525A4D;
+  color: white;
+  border: 0;
+  border-radius: 0;
+}
+
+.img-treatment img, .img-treatment-archive img{
+  height: 450px;
+  object-fit: cover;
+  
+}
   @media only screen and (max-width: 991px){
     .pt-50{
         padding-top: 0;
@@ -600,11 +654,24 @@ header p{
         display: none;
     }
     header h1, .fs-50{
-        font-size: 36px;
-    }
+      font-size: 24px;
   }
-  @media only screen and (max-width: 991px){
-    header h1, .fs-50{
-        font-size: 24px;
+  }
+
+  @media only screen and (max-width: 566px){
+    .carousel-control-prev img, .carousel-control-next img{
+      width: 40px;
+      height: 40px;
+    }
+    .carousel-control-prev{
+      left: -5px;
+    }
+    
+    .carousel-control-next{
+      right: -5px;
+    }
+   .img-treatment-archive img{
+      height: 200px;
+      object-fit: cover;
     }
   }

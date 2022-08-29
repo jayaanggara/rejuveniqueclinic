@@ -2,10 +2,10 @@
 <div class="pt-50">
     <header class="header-home" data-enllax-ratio=".5" data-enllax-direction="vertical">
         <div class="container py-7">
-            <div class="col-md-5 container-text">
+            <div class="col-md-5 container-text ">
                 <span data-aos="fade-up" data-aos-duration="500">Rejuvenique</span>
                 <h1 data-aos="fade-up" data-aos-duration="500">Aesthetic & Anti-Aging Clinic in Bali</h1>
-                <p data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
+                <p class="text-white" data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
                 <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
             </div>
         </div>
@@ -38,9 +38,44 @@
                 <div class="sparator mx-auto mt-4"></div>
             </div>
             <div class="owl-carousel owl-theme slider-carousel" data-aos="fade-up" data-aos-duration="500">
-                <a href="" class="item">
+            <?php
+                    $args = array(  
+                        'post_type' => 'treatments',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 8, 
+                        'orderby' => 'title', 
+                        'order' => 'ASC', 
+                    );
+                
+                    $loop = new WP_Query( $args ); 
+                        
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $title = get_the_title($post->ID);
+                    $deskripsi = get_the_excerpt($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $permalink = get_the_permalink($post->ID);
+                    ?>
+                    <a href="<?php echo $permalink ?>" class="item">
+                        <div class="mt-md-4 box p-4 p-md-0">
+                            <div class="img-hover img-treatment">
+                                <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
+                                <div class="overlay">
+                                    <span class="text cus-href">find out more</span>
+                                </div>
+                            </div>
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h5 fw-light text-uppercase"><?php echo $title?></h3>
+                            </div>
+                        </div>
+                    </a>
+                    <?php 
+                    endwhile;
+                
+                    wp_reset_postdata(); 
+                ?>    
+            <a href="" class="item">
                     <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
+                        <div class="img-hover img-treatment">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/botox.jpg" class="w-100" alt="">
                             <div class="overlay">
                                 <span class="text cus-href">find out more</span>
@@ -48,71 +83,6 @@
                         </div>
                         <div class="p-4 text-center">
                             <h3 class="c-blue h5 fw-light text-uppercase">Botox</h3>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/derma-filler.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Dermal filler</h3>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/thread-lift.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Thread Lift</h3>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/FACIAL-TREATMENT.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Facial Treatment</h3>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/SKIN-REJUVENATION.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Skin Rejuvenation</h3>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/Mole-and-skin-tag-removal.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Mole & Skin Tag Removal</h3>
                         </div>
                     </div>
                 </a>
@@ -144,7 +114,7 @@
 <section>
     <div class="bg-section">
         <div class="py-5 vh-70 container position-relative">
-        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase">we will be glad
+        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase w-100">we will be glad
         <br>to see you</h2>
         </div>
     </div>

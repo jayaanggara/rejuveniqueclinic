@@ -10,7 +10,7 @@ if( !empty( $image ) ): ?>
     <div class="container">
         <div class="mx-auto border text-center py-5 bg-white" style="position: relative;top: -70px;">
             <h1 class="h3"><?php the_title(); ?></h1>
-            <span><?php echo get_the_date() ?> . <?php echo get_the_author('name'); ?></span>
+            <span>Valid Until 21 November 2022</span>
         </div>
 
         <div class="border-bottom pb-4 mb-4">
@@ -46,7 +46,7 @@ if( !empty( $image ) ): ?>
                 ?>
                 <a href="<?php echo $permalink ?>" class="col">
                     <div class="border">
-                    <img src="<?php echo $thumbnail ?>" alt="" style="min-height: 150px;object-fit: cover;">
+                    <img src="<?php echo $thumbnail ?>" alt="">
                     <div class="p-2">
                         <h3 style="font-size: 14px;"><?php echo $title ?></h3>
                         <span style="color: #757B71">Read More</span>

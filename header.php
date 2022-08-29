@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <nav id="navbar" class="mainNav navbar" style="margin-top: 50px;">
+    <nav id="navbar" class="mainNav navbar <?php if(is_page( 'blog' )){ echo "bg-grey";}?>" style="margin-top: 50px;">
         <div class="container">
             <a class="navbar-brand" title="<?php bloginfo ('tile');?>" href="#">
                 <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" alt="<?php bloginfo ('tile');?>">
