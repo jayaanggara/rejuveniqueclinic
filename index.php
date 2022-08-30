@@ -107,7 +107,7 @@ if( $about ): ?>
             </div>
         </div>
         <div data-aos="fade-up" data-aos-duration="500">
-            <?php echo do_shortcode('[wprevpro_usetemplate tid="1"]')  ?>
+            <?php echo do_shortcode('[wprevpro_usetemplate tid="2"]')  ?>
         </div>
     </div>
 </section>

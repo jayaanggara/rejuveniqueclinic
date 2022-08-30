@@ -26,7 +26,7 @@ get_header();?>
 
 <section>
     <div class="container py-5">
-    <?php echo do_shortcode('[wprevpro_usetemplate tid="1"]')  ?>
+    <?php echo do_shortcode('[wprevpro_usetemplate tid="2"]')  ?>
     </div>
 </section>
 
