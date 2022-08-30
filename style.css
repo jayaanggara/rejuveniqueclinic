@@ -301,7 +301,13 @@ header p{
     background: #ede6de;
     border-radius: 0;
     margin-top: 25px;
-	padding: 15px 30px;
+	  padding: 15px 30px;
+}
+.cus-btn-footer{
+  background:#515c4e;
+  border-radius: 0;
+  margin-top: 25px;
+  padding: 15px 30px;
 }
 .container-text{
   position: absolute;
@@ -643,6 +649,48 @@ header p{
   object-fit: cover;
   
 }
+
+#slider-tret ul li img{
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+#carousel-tret ul li img{
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.flex-direction-nav a:before {
+  content: " " !important;
+  display: block;
+  background: url('assets/img/arrow-left.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.flex-direction-nav a.flex-next:before {
+  content: " " !important;
+  display: block;
+  background: url('assets/img/arrow-right.png');
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.tabs-tret .nav-tabs{
+  border-top: 1px solid #525A4D;
+  border-bottom: none;
+}
+.tabs-tret .nav-link{
+  color: black;
+}
+.tabs-tret .nav-link.active{
+  border-top: 2px solid #525A4D;
+  border-radius: 0;
+}
+
   @media only screen and (max-width: 991px){
     .pt-50{
         padding-top: 0;

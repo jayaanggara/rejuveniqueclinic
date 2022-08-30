@@ -19,35 +19,7 @@ if( !empty( $image ) ): ?>
                     <p>CONTACT US</p>
                     <h2>Have questions? Get in touch!</h2>
                 </div>
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="exampleInputEmail1" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="exampleInputEmail1" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="exampleInputEmail1" class="form-label">Phone</label>
-                            <input type="nomber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="exampleInputEmail1" class="form-label">Message</label>
-                        <textarea name="message" id="message" cols="30" class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="w-100 text-end">
-                    <button type="submit" class="btn btn-kontak mt-3">Submit</button>
-                    </div>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="124" title="Contact form"]')?>
             </div>
         </div>
     </div>

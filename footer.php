@@ -1,12 +1,13 @@
 	
 <?php get_template_part( 'template-part/footer-content'); ?>
 </main>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory') ;?>/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="<?php bloginfo('stylesheet_directory') ;?>/assets/plugins/enllax/jquery.enllax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.min.js"></script>
 <script>
 AOS.init();
 $(window).enllax({
@@ -21,6 +22,28 @@ ratio: 0.5,  // multiplier for scrolling speed. Less is slower. Default: '0'.
 direction: 'vertical' // another value for direction is 'horizontal'.
 
 });
+$(window).load(function() {
+  // The slider being synced must be initialized first
+  $('#carousel-tret').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 210,
+    itemMargin: 5,
+    asNavFor: '#slider-tret'
+  });
+ 
+  $('#slider-tret').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel-tret"
+  });
+});
+
+
 jQuery(document).ready(function ($) {
         $("#openMenu").click( function(){
             $('.containerNav').fadeIn();
@@ -164,6 +187,7 @@ $('.news').owlCarousel({
         }
     }
 });
+
 
 </script>
 <?php wp_footer();?>

@@ -1,40 +1,54 @@
-<?php get_header();?>
+<?php 
+/**
+ * 
+ * Template Name: Home
+ * 
+ */
+
+get_header();?>
 <div class="pt-50">
-    <header class="header-home" data-enllax-ratio=".5" data-enllax-direction="vertical">
+<?php
+$header = get_field('header');
+if( $header ): ?>
+    <header class="header-home" style="background-image: url('<?php echo esc_url( $header['image']['url'] ); ?>')" data-enllax-ratio=".5" data-enllax-direction="vertical">
         <div class="container py-7">
             <div class="col-md-5 container-text ">
-                <span data-aos="fade-up" data-aos-duration="500">Rejuvenique</span>
-                <h1 data-aos="fade-up" data-aos-duration="500">Aesthetic & Anti-Aging Clinic in Bali</h1>
-                <p class="text-white" data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ab, unde provident dolor, doloremque molestias rerum minus iste officiis labore quam doloribus obcaecati repudiandae. Nihil quia error voluptate ab ea.</p>
+                <span data-aos="fade-up" data-aos-duration="500"><?php echo $header['sec_title']; ?></span>
+                <h1 data-aos="fade-up" data-aos-duration="500"><?php echo $header['title']; ?></h1>
+                <p class="text-white" data-aos="fade-up" data-aos-duration="500"><?php echo $header['deskripsi']; ?></p>
                 <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
             </div>
         </div>
     </header>
+    <?php endif; ?>
 </div>
 
 <section class="bg-brown">
+<?php
+$about = get_field('about');
+if( $about ): ?>
     <div class="container py-7">
         <div class="row align-items-center g-5">
             <div class="col-md-7">
                 <div class="row">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service1.jpg" alt="" class="col-6 pt-5" data-aos="fade-up" data-aos-duration="500">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/service2.jpg" alt="" class="col-6 pb-5" data-aos="fade-up" data-aos-duration="500">
+                <img src="<?php echo esc_url( $about['image_1']['url'] ); ?>" alt="" class="col-6 pt-5" data-aos="fade-up" data-aos-duration="500">
+                <img src="<?php echo esc_url( $about['image_2']['url'] ); ?>" alt="" class="col-6 pb-5" data-aos="fade-up" data-aos-duration="500">
                 </div>
             </div>
             <div class="col-md-5" data-aos="fade-up" data-aos-duration="500">
-                <h2 class="fw-bold">Rejuvenique Aesthetic & Anti-Aging Clinic in Bali</h2>
-                <p class="py-5 mb-0">You will see a difference before and after treatment. Naturally-beautiful results is our goal, just look the same you, just a lot fresher, younger with healthier skin.</p>
-                <p>— Dr. Jeanny Kusumawati</p>
+                <h2 class="fw-bold"><?php echo $about['title']; ?></h2>
+                <div class="py-5 mb-0"><?php echo $about['deskripsi']; ?></div>
             </div>
         </div>
     </div>
+    <?php endif; ?>
 </section>
 
 <section>
     <div class="container py-5">
         <div class="col-md-10 mx-auto">
             <div class="ls-20 text-center pb-5" data-aos="fade-up" data-aos-duration="500">
-                <h2 class="fw-bold fs-50 text-uppercase" >OUR<br/> TREATMENTS</h2>
+                <h2 class="fw-bold fs-50 text-uppercase" ><?php echo get_field('title_home',68)?></h2>
                 <div class="sparator mx-auto mt-4"></div>
             </div>
             <div class="owl-carousel owl-theme slider-carousel" data-aos="fade-up" data-aos-duration="500">
@@ -73,22 +87,9 @@
                 
                     wp_reset_postdata(); 
                 ?>    
-            <a href="" class="item">
-                    <div class="col mt-md-4 box p-4 p-md-0">
-                        <div class="img-hover img-treatment">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/treatment/botox.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4 text-center">
-                            <h3 class="c-blue h5 fw-light text-uppercase">Botox</h3>
-                        </div>
-                    </div>
-                </a>
             </div>
             <div class="text-center">
-                <a class="read-more" href="#" title="">+ see all treatment</a>
+                <a class="read-more" href="<?php echo bloginfo('url')?>/treatments" title="">+ see all treatment</a>
             </div>
         </div>
     </div>
@@ -98,11 +99,11 @@
     <div class="container pt-7 pb-5">
         <div class="row align-items-center pb-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-md-6">
-                <h2 class="fs-50 ls-20">WHAT<br/>THEY SAY ?</h2>
+                <h2 class="fs-50 ls-20"><?php echo get_field('title',112)?></h2>
                 <div class="sparator mt-4"></div>
             </div>
             <div class="col-md-6 text-md-end py-4">
-                <a class="read-more" href="#" title="">+ see all testimonials</a>
+                <a class="read-more" href="<?php echo bloginfo('url')?>/testimonials" title="">+ see all testimonials</a>
             </div>
         </div>
         <div data-aos="fade-up" data-aos-duration="500">
@@ -112,68 +113,65 @@
 </section>
 
 <section>
-    <div class="bg-section">
+<?php
+$sparator = get_field('sparator');
+if( $sparator ): ?>
+    <div class="bg-section" style="background-image: url('<?php echo esc_url( $sparator['image']['url'] ); ?>')" >
         <div class="py-5 vh-70 container position-relative">
-        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase w-100">we will be glad
-        <br>to see you</h2>
+        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase w-100"><?php echo $sparator['text']?></h2>
         </div>
     </div>
+<?php endif; ?>
 </section>
 
 <section>
     <div class="container pt-5 pb-7">
         <div class="row align-items-center py-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-md-6">
-                <h2 class="fs-50 ls-20">SPECIAL<br/>OFFERS</h2>
+                <h2 class="fs-50 ls-20"><?php echo get_field('title_home',15)?></h2>
                 <div class="sparator mt-4"></div>
             </div>
             <div class="col-md-6 text-md-end py-4">
-                <a class="read-more" href="#" title="">+ see all special offers</a>
+                <a class="read-more" href="<?php echo bloginfo('url')?>/special-offers" title="">+ see all special offers</a>
             </div>
         </div>
         <div class="owl-carousel owl-theme special-offers" data-aos="fade-up" data-aos-duration="500">
-            <a href="" class="item">
-                <div class="col mt-md-4 box">
-                    <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-1.jpg" class="w-100" alt="">
-                        <div class="overlay">
-                            <span class="text cus-href">find out more</span>
+        <?php
+                    $args = array(  
+                        'post_type' => 'special-offers',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 3, 
+                        'orderby' => 'title', 
+                        'order' => 'ASC', 
+                    );
+                
+                    $loop = new WP_Query( $args ); 
+                        
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $title = get_the_title($post->ID);
+                    $deskripsi = get_the_excerpt($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $permalink = get_the_permalink($post->ID);
+                    ?>
+                <a href="<?php echo $permalink ?>" class="item">
+                    <div class="col mt-md-4 box">
+                        <div class="img-hover img-special">
+                            <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
+                            <div class="overlay">
+                                <span class="text cus-href">find out more</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="c-green fw-light h5 text-capitalize"><?php echo $title ?></h3>
+                            <p class="mb-0 fw-light"><?php echo $deskripsi ?></p>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                        <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="item">
-                <div class="col mt-md-4 box">
-                    <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-2.jpg" class="w-100" alt="">
-                        <div class="overlay">
-                            <span class="text cus-href">find out more</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                        <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="" class="item">
-                <div class="col mt-md-4 box">
-                    <div class="img-hover img-special">
-                        <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/special/special-offer-3.jpg" class="w-100" alt="">
-                        <div class="overlay">
-                            <span class="text cus-href">find out more</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                        <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            <?php 
+                    endwhile;
+                
+                    wp_reset_postdata(); 
+                ?> 
         </div>
     </div>
 </section>
@@ -185,97 +183,49 @@
             <div class="row align-items-center pb-5" data-aos="fade-up" data-aos-duration="500">
                 <div class="col-md-6">
                     <span class="c-brown h6 fw-bold">News</span>
-                    <h2 class="fs-50">Our commitment to your well-being and health</h2>
+                    <h2 class="fs-50"><?php echo get_field('title_home',47)?></h2>
                 </div>
                 <div class="col-md-6 text-md-end py-4">
-                    <a class="read-more" href="#" title="">+ see all news</a>
+                    <a class="read-more" href="<?php echo bloginfo('url')?>/blog" title="">+ see all news</a>
                 </div>
             </div>
             <div class="owl-carousel owl-theme news" data-aos="fade-up" data-aos-duration="500">
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-1.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
+                <?php
+                    $args = array(  
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'posts_per_page' => 4, 
+                        'orderby' => 'title', 
+                        'order' => 'ASC', 
+                    );
+                
+                    $loop = new WP_Query( $args ); 
+                        
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $title = get_the_title($post->ID);
+                    $deskripsi = get_the_excerpt($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $permalink = get_the_permalink($post->ID);
+                    ?>    
+                    <a href="<?php echo $permalink?>" class="item">
+                        <div class="col mt-md-4 box p-md-0 p-4">
+                            <div class="img-hover img-news">
+                                <img src="<?php echo $thumbnail?>" class="w-100" alt="">
+                                <div class="overlay">
+                                    <span class="text cus-href">find out more</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="c-green fw-light h5 text-capitalize"><?php echo $title?></h3>
+                                <p class="mb-0 fw-light"><?php $deskripsi ?></p>
                             </div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-2.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-3.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-4.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-5.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="item">
-                    <div class="col mt-md-4 box p-md-0 p-4">
-                        <div class="img-hover img-news">
-                            <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/blog/blog-6.jpg" class="w-100" alt="">
-                            <div class="overlay">
-                                <span class="text cus-href">find out more</span>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize">Lorem ipsum dolor</h3>
-                            <p class="mb-0 fw-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                    <?php 
+                        endwhile;
+                    
+                        wp_reset_postdata(); 
+                    ?> 
                 
             </div>
         </div>
