@@ -26,7 +26,7 @@ get_header();?>
 
 <section>
     <div class="container py-5">
-    <?php echo do_shortcode('[wprevpro_usetemplate tid="2"]')  ?>
+    <?php echo  do_action( 'wprev_pro_plugin_action', 3 );   ?>
     </div>
 </section>
 

@@ -70,7 +70,7 @@ if( $about ): ?>
                     $permalink = get_the_permalink($post->ID);
                     ?>
                     <a href="<?php echo $permalink ?>" class="item">
-                        <div class="mt-md-4 box p-4 p-md-0">
+                        <div class="box p-4 p-md-0">
                             <div class="img-hover img-treatment">
                                 <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                 <div class="overlay">
@@ -88,7 +88,7 @@ if( $about ): ?>
                     wp_reset_postdata(); 
                 ?>    
             </div>
-            <div class="text-center">
+            <div class="text-center py-4">
                 <a class="read-more" href="<?php echo bloginfo('url')?>/treatments" title="">+ see all treatment</a>
             </div>
         </div>
@@ -110,18 +110,6 @@ if( $about ): ?>
             <?php echo do_shortcode('[wprevpro_usetemplate tid="2"]')  ?>
         </div>
     </div>
-</section>
-
-<section>
-<?php
-$sparator = get_field('sparator');
-if( $sparator ): ?>
-    <div class="bg-section" style="background-image: url('<?php echo esc_url( $sparator['image']['url'] ); ?>')" >
-        <div class="py-5 vh-70 container position-relative">
-        <h2 class="text-bottom-section fs-50 fw-bold text-uppercase w-100"><?php echo $sparator['text']?></h2>
-        </div>
-    </div>
-<?php endif; ?>
 </section>
 
 <section>
@@ -154,7 +142,7 @@ if( $sparator ): ?>
                     $permalink = get_the_permalink($post->ID);
                     ?>
                 <a href="<?php echo $permalink ?>" class="item">
-                    <div class="col mt-md-4 box">
+                    <div class="col box">
                         <div class="img-hover img-special">
                             <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                             <div class="overlay">
@@ -162,7 +150,7 @@ if( $sparator ): ?>
                             </div>
                         </div>
                         <div class="p-4">
-                            <h3 class="c-green fw-light h5 text-capitalize"><?php echo $title ?></h3>
+                            <h3 class="c-green fw-light text-capitalize"><?php echo $title ?></h3>
                             <p class="mb-0 fw-light"><?php echo $deskripsi ?></p>
                         </div>
                     </div>
@@ -208,7 +196,7 @@ if( $sparator ): ?>
                     $permalink = get_the_permalink($post->ID);
                     ?>    
                     <a href="<?php echo $permalink?>" class="item">
-                        <div class="col mt-md-4 box p-md-0 p-4">
+                        <div class="col box p-md-0 p-4">
                             <div class="img-hover img-news">
                                 <img src="<?php echo $thumbnail?>" class="w-100" alt="">
                                 <div class="overlay">
@@ -232,7 +220,7 @@ if( $sparator ): ?>
     </div>
 </section>
 
-<section class="pt-7" data-aos="fade-up" data-aos-duration="500">
+<section class="pt-2" data-aos="fade-up" data-aos-duration="500">
     <div class="rwd-media">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15775.908363190292!2d115.263732!3d-8.693725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdddeea0348344005!2sRejuvenique%20Aesthetics%20Clinic%2C%20Sanur!5e0!3m2!1sid!2sid!4v1660544218397!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

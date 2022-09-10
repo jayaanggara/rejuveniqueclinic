@@ -10,102 +10,96 @@ get_header();?>
 
 <section class="pt-120">
     <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <!-- Place somewhere in the <body> of your page -->
-                <div id="slider-tret" class="flexslider mb-2">
-                    <ul class="slides">
-                    <?php 
-                    $images = get_field('gallery');
-                    if( $images ): ?>
-                            <?php foreach( $images as $image ): ?>
-                                <li>
-                                    <img src="<?php echo esc_url($image['url']); ?>" />
-                                </li>
-                            <?php endforeach; ?>
-                    <?php endif; ?>
-                        
-                        <!-- items mirrored twice, total of 12 -->
-                    </ul>
-                </div>
-                <div id="carousel-tret" class="flexslider">
-                <ul class="slides">
-                    <?php 
-                    $images = get_field('gallery');
-                    if( $images ): ?>
-                            <?php foreach( $images as $image ): ?>
-                                <li>
-                                    <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" />
-                                </li>
-                            <?php endforeach; ?>
-                    <?php endif; ?>
-                    <!-- items mirrored twice, total of 12 -->
-                </ul>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div class="pt-md-5">
-                    <h1 class="h2 c-green mb-3" data-aos="fade-up" data-aos-duration="500"><?php the_title(); ?></h1>
-                    <p class="fw-bold h4 mb-4 c-green" data-aos="fade-up" data-aos-duration="500"><?php the_field('price')?></p>
-                    <p data-aos="fade-up" data-aos-duration="500"><?php the_field('sec_descriptions')?></p>
-                    <a href="#" class="btn mt-0 cus-btn-footer text-white" data-aos="fade-up" data-aos-duration="500" data-bs-toggle="modal" data-bs-target="#exampleModal"> Book Now </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container py-5">
-    <nav>
-    <div class="nav nav-tabs tabs-tret" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">description</button>
-        <button class="nav-link" id="nav-other-serv-tab" data-bs-toggle="tab" data-bs-target="#nav-other-serv" type="button" role="tab" aria-controls="nav-other-serv" aria-selected="false">Other Service</button>
-    </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab" tabindex="0">
-            <div class="py-3">
-                <?php the_content() ?>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-other-serv" role="tabpanel" aria-labelledby="nav-other-serv-tab" tabindex="0">
-            <div class="row row-cols-md-4 row-cols-2 pb-5 pt-2">
-                <?php
-                    $args = array(  
-                        'post_type' => 'treatments',
-                        'post_status' => 'publish',
-                        'posts_per_page' => 4, 
-                        'orderby' => 'title', 
-                        'order' => 'ASC', 
-                    );
-                
-                    $loop = new WP_Query( $args ); 
-                        
-                    while ( $loop->have_posts() ) : $loop->the_post();
-                    $title = get_the_title($post->ID);
-                    $price = get_field('price', $post->ID);
-                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
-                    $permalink = get_the_permalink($post->ID);
-                    ?>
-                    <a href="<?php echo $permalink ?>" class="col pt-md-0 pt-3">
-                        <div class="border">
-                        <img src="<?php echo $thumbnail ?>" alt="" style="min-height: 150px;object-fit: cover;">
-                        <div class="p-2">
-                            <h3 style="font-size: 14px;"><?php echo $title ?></h3>
-                            <p class="fw-bold mb-1 c-green"><?php echo $price ?></p>
-                            <span style="color: #757B71">Read More</span>
-                        </div>
-                        </div>
-                    </a>
-                    <?php 
-                    endwhile;
-                
-                    wp_reset_postdata(); 
-                ?>
-            </div>
-        </div>
-    </div>
+        <div class="col-md-8 mx-auto">
+            <h1 class="c-brown py-5"><?php echo get_the_title(); ?></h1>
+            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="w-100 pb-4">
 
+            <a href="" class="btn cus-btn-header c-green" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
+
+            <div class="content">
+                <div class="pt-5 pb-4">
+                    <?php the_content() ?>
+                </div>
+
+                <?php
+                $accordion = get_field('accordion');
+                if($accordion){
+                    $count = 1;
+                    foreach ($accordion as $acc) { ?>
+                        <div class="accordion border-0" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-<?php echo $count;?>">
+                                <button class="accordion-button ps-0 <?php if($count > 1){ echo "collapsed"; }?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $count;?>" aria-expanded="true" aria-controls="collapse-<?php echo $count;?>">
+                                    <?php echo $acc['title'] ?>
+                                </button>
+                                </h2>
+                                <div id="collapse-<?php echo $count;?>" class="accordion-collapse collapse <?php if($count == 1){ echo "show"; }?>" aria-labelledby="heading-<?php echo $count;?>" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0">
+                                    <?php echo $acc['deskripsi'] ?>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php 
+                $count++;    
+                }
+                    
+                    }
+                    
+                ?>
+                
+
+
+            </div>
+        </div>
+
+        <div class="col-md-10 mx-auto py-7">
+            <div class="ls-20 text-center pb-5" data-aos="fade-up" data-aos-duration="500">
+                <h2 class="fw-bold fs-50 text-uppercase" ><?php echo get_field('title_home',68)?></h2>
+                <div class="sparator mx-auto mt-4"></div>
+            </div>
+            <div class="owl-carousel owl-theme slider-carousel" data-aos="fade-up" data-aos-duration="500">
+                <?php
+                        $args = array(  
+                            'post_type' => 'treatments',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 8, 
+                            'orderby' => 'title', 
+                            'order' => 'ASC', 
+                        );
+                    
+                        $loop = new WP_Query( $args ); 
+                            
+                        while ( $loop->have_posts() ) : $loop->the_post();
+                        $title = get_the_title($post->ID);
+                        $deskripsi = get_the_excerpt($post->ID);
+                        $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                        $permalink = get_the_permalink($post->ID);
+                        ?>
+                        <a href="<?php echo $permalink ?>" class="item">
+                            <div class="box p-4 p-md-0">
+                                <div class="img-hover img-treatment">
+                                    <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
+                                    <div class="overlay">
+                                        <span class="text cus-href">find out more</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 text-center">
+                                    <h3 class="c-blue h5 fw-light text-uppercase"><?php echo $title?></h3>
+                                </div>
+                            </div>
+                        </a>
+                        <?php 
+                        endwhile;
+                    
+                        wp_reset_postdata(); 
+                    ?>    
+                </div>
+                <div class="text-center py-4">
+                    <a class="read-more" href="<?php echo bloginfo('url')?>/treatments" title="">+ see all treatment</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

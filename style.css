@@ -79,7 +79,6 @@ html, body {
 body {
 	font-family: var(--font-light);
 	overflow-x: hidden;
-	font-size: 14px;
     color: #000;
     font-family: 'Poppins';
 }
@@ -104,18 +103,18 @@ img{
 }
 
 .py-7{
-    padding-top: 7em;
-    padding-bottom: 7em;
+    padding-top: 6em;
+    padding-bottom: 6em;
 }
 
 .bg-grey{
   background-color: #E9E9E9 !important;
 }
 .pt-7{
-    padding-top: 7em;
+    padding-top: 6em;
 }
 .pb-7{
-  padding-bottom: 7em;
+  padding-bottom: 6em;
 }
 h1,h2{
     font-family: 'Abhaya Libre';
@@ -163,11 +162,11 @@ p{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(203, 195, 187, 0.83);
+    background-color: rgba(255, 255, 255, 0.83);
     z-index: 999;
 }
 .navbar-brand {
-    width: 250px;
+    width: 330px;
     max-width: 100%;
 }
 ul.nav-primary {
@@ -454,7 +453,8 @@ header p{
     text-decoration: none;
     color: #cdab88;
     letter-spacing: 4px;
-	padding: 15px 0px 15px 30px;
+    padding: 15px 0px 15px 30px;
+    font-size:18px;
   }
 
   .ls-20{
@@ -577,9 +577,10 @@ header p{
 
   .box {
     transition: all .5s;
+    transform: translateY(5%);
   }
   .box:hover {
-    margin-top: 0 !important;
+    transform: translateY(0%);
   }
   .box:hover .img-hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
@@ -598,7 +599,6 @@ header p{
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
     z-index: 100;
   }
   .my-float {
@@ -691,6 +691,16 @@ header p{
   border-radius: 0;
 }
 
+.accordion-item{
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0 !important;
+}
+.accordion-button {
+  color: #cdab88 !important;
+  background: none !important;
+}
+
   @media only screen and (max-width: 991px){
     .pt-50{
         padding-top: 0;
@@ -722,4 +732,8 @@ header p{
       height: 200px;
       object-fit: cover;
     }
+    .navbar-brand {
+      width: 250px;
+      max-width: 100%;
+  }
   }

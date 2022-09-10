@@ -22,25 +22,29 @@
             <h2 class="mb-3 c-brown" data-aos="fade-up" data-aos-duration="500">Rejuvenique Aesthetic </br> Clinic in Bali.</h2>
             <div class="row align-items-top">
                 <div class="col-md-6" data-aos="fade-up" data-aos-duration="550">                    
-                    <p class="pt-4 text-white">
+                    <div class="pt-4 text-white">
                     <b>Operating Hours</b><br>
-                    Monday - Saturday : 10am - 6pm (by appointment)<br>
+                    Monday - Saturday : 9am - 6pm<br>
                     <br>
                     <b>Address</b><br>
-                    Jl. Danau Tamblingan 59 Sanur Bali 80228 – Indonesia<br>
-                    <br>
+                    <ul style="padding: 0;list-style: none;color: white;">
+                        <li><b style="font-size: 14px;">Sanur</b></li>
+                        <li>Jl. Danau Tamblingan no. 59, Sanur, Bali 80228</li>
+                        <li><b style="font-size: 14px;">Canggu</b></li>
+                        <li>Jl. Pantai Berawa no. 8, Badung, Bali 80361</li>
+                    </ul>
                     <b>Contact</b><br>
                     contact@rejuveniqueclinic.com<br>
-                    +62 811 399 225<br>
-                    </p>
-                    <div>
-                        <a href="">
+                    +62 853 3316 5062<br>
+                    </div>
+                    <div class="pt-4">
+                        <a href="" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/instagram.png" alt="">
                         </a>
-                        <a href="">
+                        <a href="" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/facebook.png" alt="">
                         </a>
-                        <a href="">
+                        <a href="" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/google-maps.png" alt="">
                         </a>
                     </div>

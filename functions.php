@@ -17,7 +17,7 @@ register_nav_menus(
 	)
 );
 
-add_image_size( 'news-thumb', 500, 575, true );
+add_image_size( 'news-thumb', 340, 450, true );
 
 // acf
 add_filter('acf/format_value_for_api', 'theme_format_value_for_api');

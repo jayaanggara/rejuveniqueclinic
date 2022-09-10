@@ -3,7 +3,6 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory') ;?>/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="<?php bloginfo('stylesheet_directory') ;?>/assets/plugins/enllax/jquery.enllax.min.js"></script>
@@ -69,7 +68,7 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar-first").style.top = "0";
-     document.getElementById("navbar").style.marginTop = "50px";
+     document.getElementById("navbar").style.marginTop = "55px";
     prevScrollpos = currentScrollPos;
   } else if (currentScrollPos > prevScrollpos + 200){
     document.getElementById("navbar-first").style.top = "-60px";
