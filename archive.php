@@ -7,7 +7,7 @@
 
 get_header();?>
 <div class="container pt-120">
-    <div class="row">
+    <div class="row py-7">
         <div class="col-md-8">
         <?php
             $args = array(  
@@ -28,15 +28,17 @@ get_header();?>
             $date = get_the_date();
             $author = get_the_author($post->ID);
             ?>
-            <a href="<?php echo $permalink; ?>">
-                <img src="<?php echo $thumbnail?>" alt="" class="w-100">
-                <div class="py-4">
-                    <h2><?php echo $title; ?></h2>
-                    <p class="fw-light"><span><?php echo $date; ?></span><span> . <?php echo $author; ?></span></p>
-                    <p><?php echo $deskripsi; ?></p>
-                    <span>Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
-                </div>
-            </a>
+            <div class="mb-4">
+                <a href="<?php echo $permalink; ?>">
+                    <img src="<?php echo $thumbnail?>" alt="" class="w-100">
+                    <div class="py-4">
+                        <h2><?php echo $title; ?></h2>
+                        <p class="fw-light"><span><?php echo $date; ?></span></p>
+                        <p><?php echo $deskripsi; ?></p>
+                        <span>Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                    </div>
+                </a>
+            </div>
             <?php 
             endwhile;
 
@@ -65,13 +67,13 @@ get_header();?>
             $date = get_the_date();
             $author = get_the_author($post->ID);
             ?>
-            <a href="<?php echo $permalink; ?>" class="row g-3 align-items-center">
+            <a href="<?php echo $permalink; ?>" class="row g-3 align-items-center pb-3">
             <div class="col-md-4">
                 <img src="<?php echo $thumbnail?>" alt="" class="w-100" style="height: 100px;object-fit: cover;">
             </div>
             <div class="col-md-8">
-                <p class="mb-0 fw-light"><span><?php echo $date; ?></span><span> . <?php echo $author; ?></span></p>
-                <h2 style="font-size:14px"><?php echo $title; ?></h2>
+                <p class="mb-0 fw-light"><span><?php echo $date; ?></span></p>
+                <h2 style="font-size:18px"><?php echo $title; ?></h2>
             </div>
             </a>
             <?php 

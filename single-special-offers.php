@@ -47,9 +47,9 @@ if( !empty( $image ) ): ?>
                     ?>
                     <a href="<?php echo $permalink ?>" class="col">
                         <div class="border">
-                        <img src="<?php echo $thumbnail ?>" alt="">
+                        <img src="<?php echo $thumbnail ?>" alt="" class="w-100" style="height: 200px;object-fit: cover;">
                         <div class="p-2">
-                            <h3 style="font-size: 14px;"><?php echo $title ?></h3>
+                            <h3 style="font-size: 16px;"><?php echo $title ?></h3>
                             <span style="color: #757B71">Read More</span>
                         </div>
                         </div>

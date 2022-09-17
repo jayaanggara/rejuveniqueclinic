@@ -66,19 +66,19 @@ if( $about ): ?>
                     while ( $loop->have_posts() ) : $loop->the_post();
                     $title = get_the_title($post->ID);
                     $deskripsi = get_the_excerpt($post->ID);
-                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID, 'news-thumb');
                     $permalink = get_the_permalink($post->ID);
                     ?>
                     <a href="<?php echo $permalink ?>" class="item">
                         <div class="box p-4 p-md-0">
-                            <div class="img-hover img-treatment">
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
+                            </div>
+                            <div class="img-hover img-treatment mb-5">
                                 <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                 <div class="overlay">
                                     <span class="text cus-href">find out more</span>
                                 </div>
-                            </div>
-                            <div class="p-4 text-center">
-                                <h3 class="c-blue h5 fw-light text-uppercase"><?php echo $title?></h3>
                             </div>
                         </div>
                     </a>
@@ -149,9 +149,8 @@ if( $about ): ?>
                                 <span class="text cus-href">find out more</span>
                             </div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="c-green fw-light text-capitalize"><?php echo $title ?></h3>
-                            <p class="mb-0 fw-light"><?php echo $deskripsi ?></p>
+                        <div class="p-4 mb-4">
+                            <h3 class="c-green h4 fw-light text-capitalize"><?php echo $title ?></h3>
                         </div>
                     </div>
                 </a>
@@ -166,7 +165,7 @@ if( $about ): ?>
 
 <section style="background-color: #fdfcfa;position:relative;">
 <div class="vl mx-auto"></div>
-    <div class="container pb-5 pt-7">
+    <div class="container py-7">
         <div class="col-lg-8 mx-auto">
             <div class="row align-items-center pb-5" data-aos="fade-up" data-aos-duration="500">
                 <div class="col-md-6">
@@ -192,7 +191,7 @@ if( $about ): ?>
                     while ( $loop->have_posts() ) : $loop->the_post();
                     $title = get_the_title($post->ID);
                     $deskripsi = get_the_excerpt($post->ID);
-                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID, 'news-thumb');
                     $permalink = get_the_permalink($post->ID);
                     ?>    
                     <a href="<?php echo $permalink?>" class="item">

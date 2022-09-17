@@ -25,7 +25,7 @@ get_header();?>
 </div>
 
 <section>
-    <div class="container py-5">
+    <div class="container py-7">
     <?php echo  do_action( 'wprev_pro_plugin_action', 3 );   ?>
     </div>
 </section>

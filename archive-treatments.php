@@ -33,7 +33,7 @@ get_header();?>
                     $args = array(  
                         'post_type' => 'treatments',
                         'post_status' => 'publish',
-                        'posts_per_page' => 8, 
+                        'posts_per_page' => 15, 
                         'orderby' => 'title', 
                         'order' => 'ASC', 
                     );
@@ -43,19 +43,19 @@ get_header();?>
                     while ( $loop->have_posts() ) : $loop->the_post();
                     $title = get_the_title($post->ID);
                     $deskripsi = get_the_excerpt($post->ID);
-                    $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                    $thumbnail =  get_the_post_thumbnail_url($post->ID, 'news-thumb');
                     $permalink = get_the_permalink($post->ID);
                     ?>
-                    <a href="<?php echo $permalink ?>" class="col">
-                        <div class="box">
-                            <div class="img-hover img-treatment-archive">
+                    <a href="<?php echo $permalink ?>" class="col mb-5">
+                        <div class="box p-4 p-md-0">
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h4  text-uppercase"><?php echo $title?></h3>
+                            </div>
+                            <div class="img-hover img-treatment mb-5">
                                 <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                 <div class="overlay">
                                     <span class="text cus-href">find out more</span>
                                 </div>
-                            </div>
-                            <div class="p-4 text-center">
-                                <h3 class="c-blue h5 fw-light text-uppercase"><?php echo $title?></h3>
                             </div>
                         </div>
                     </a>

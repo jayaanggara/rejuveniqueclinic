@@ -9,9 +9,9 @@ if( !empty( $image ) ): ?>
 <section>
     <div class="container">
         <div class="col-lg-8 mx-auto">
-            <div class="mx-auto border text-center py-5 bg-white" style="position: relative;top: -70px;">
+            <div class="mx-auto border text-center p-md-5 p-3 bg-white" style="position: relative;top: -70px;">
                 <h1 class="h3"><?php the_title(); ?></h1>
-                <span><?php echo get_the_date() ?> . <?php echo get_the_author('name'); ?></span>
+                <span><?php echo get_the_date() ?></span>
             </div>
         </div>
 
@@ -49,7 +49,7 @@ if( !empty( $image ) ): ?>
                     ?>
                     <a href="<?php echo $permalink ?>" class="col">
                         <div class="border">
-                        <img src="<?php echo $thumbnail ?>" alt="" style="min-height: 150px;object-fit: cover;">
+                        <img src="<?php echo $thumbnail ?>" alt=""  class="w-100" style="height: 200px;object-fit: cover;">
                         <div class="p-2">
                             <h3 style="font-size: 14px;"><?php echo $title ?></h3>
                             <span style="color: #757B71">Read More</span>

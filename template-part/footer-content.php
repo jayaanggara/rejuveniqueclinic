@@ -28,9 +28,9 @@
                     <br>
                     <b>Address</b><br>
                     <ul style="padding: 0;list-style: none;color: white;">
-                        <li><b style="font-size: 14px;">Sanur</b></li>
+                        <li class="pt-2"><b style="font-size: 14px;">Sanur</b></li>
                         <li>Jl. Danau Tamblingan no. 59, Sanur, Bali 80228</li>
-                        <li><b style="font-size: 14px;">Canggu</b></li>
+                        <li class="pt-2"><b style="font-size: 14px;">Canggu</b></li>
                         <li>Jl. Pantai Berawa no. 8, Badung, Bali 80361</li>
                     </ul>
                     <b>Contact</b><br>

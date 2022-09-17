@@ -693,13 +693,64 @@ header p{
 
 .accordion-item{
   border: 0;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #eee;
   border-radius: 0 !important;
 }
 .accordion-button {
   color: #cdab88 !important;
   background: none !important;
 }
+
+
+/* slider before after */
+  
+.before-after {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  user-select: none; 
+}
+.before-after .photo img {
+  display: block;
+  max-width: 100%;
+  height: 100%; 
+}
+.before-after .photo.before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: translate(-50%); 
+}
+.before-after .photo.before img, .before-after .photo.before .layer { transform: translate(50%); }
+.before-after .drag-handler {
+  width: 5px;
+  background-color: white;
+  margin: 0 0 0 -4px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  opacity: 1; 
+}
+.before-after .drag-handler .drag-element {
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -16px 0 0 0;
+  background-image: url('./assets/img/beforeafter.png');
+  cursor: pointer; 
+}
+.before-after:hover .drag-handler {
+opacity: 1; }
+
+/*# sourceMappingURL=before-after.css.map */
+
+
 
   @media only screen and (max-width: 991px){
     .pt-50{
@@ -713,6 +764,9 @@ header p{
     }
     header h1, .fs-50{
       font-size: 24px;
+  }
+  .pt-120{
+    padding-top: 50px;
   }
   }
 

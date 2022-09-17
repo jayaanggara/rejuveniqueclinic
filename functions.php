@@ -206,3 +206,10 @@ function cpt_treatments() {
 
 }
 add_action( 'init', 'cpt_treatments', 0 );
+
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+	return 20;
+	}
+	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );

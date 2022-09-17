@@ -18,10 +18,14 @@
     <div class="z-index position-fixed w-100 bg-green" id="navbar-first">
         <div class="container py-3 text-white text-end">
             <div class="d-inline-block" style="padding-right: 35px;font-size:14px">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/email.png" alt="" style="width: 20px;"> <span class="ps-2">contact@rejuveniqueclinic.com</span>
+                <a href="mailto:contact@rejuveniqueclinic.com" class="text-white">
+                    <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/email.png" alt="" style="width: 20px;"> <span class="ps-2">contact@rejuveniqueclinic.com</span>
+                </a>
             </div>
             <div class="ps-2 d-inline-block" style="font-size:14px">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/telpn.png" alt="" style="width: 16px;"> <span class="ps-2">+62 8123 871 1003 </span>
+                 <a href="https://wa.me/6285333165062" class="text-white">
+                <i class="fa fa-whatsapp pt-1" style="font-size: 20px;"> </i><span class="ps-1">+62 853 3316 5062 </span>
+                </a>
             </div>
         </div>
     </div>
