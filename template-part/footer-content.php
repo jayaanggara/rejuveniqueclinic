@@ -38,35 +38,21 @@
                     +62 853 3316 5062<br>
                     </div>
                     <div class="pt-4">
-                        <a href="" class="pe-3">
+                        <a href="https://www.instagram.com/rejuveniqueaesthetics.bali/" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/instagram.png" alt="">
                         </a>
-                        <a href="" class="pe-3">
+                        <a href="https://www.facebook.com/rejuvenique.bali/" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/facebook.png" alt="">
                         </a>
-                        <a href="" class="pe-3">
+                        <a href="https://www.google.com/maps?q=Jl.+Danau+Tamblingan+No.59,+Sanur,+Denpasar+Selatan,+Kota+Denpasar,+Bali+80228&ftid=0x2dd241c6e2b35d97:0xcea79e2776befa64&hl=id" class="pe-3">
                             <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/google-maps.png" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-up" data-aos-duration="600">
-                <form class="contact-form row row-cols-1">
-                    <div class="form-field col mt-4 mb-2">
-                        <input id="name" class="input-text js-input" type="text" required>
-                        <label class="label" for="name">Name</label>
-                    </div>
-                    <div class="form-field col mt-4 mb-2">
-                        <input id="email" class="input-text js-input" type="email" required>
-                        <label class="label" for="email">E-mail</label>
-                    </div>
-                    <div class="form-field col mt-4 mb-2">
-                        <input id="message" class="input-text js-input" type="text" required>
-                        <label class="label" for="message">Message</label>
-                    </div>
-                    <div class="form-field col mt-4 mb-2 align-center">
-                        <input class="btn p-0 text-white" type="submit" value="+ send message">
-                    </div>
-                </form>
+                <div class="contact-form row row-cols-1">
+                    <?php echo do_shortcode('[contact-form-7 id="182" title="footer kontak"]')?>
+                </div>
                 </div>
             </div>
         </div>

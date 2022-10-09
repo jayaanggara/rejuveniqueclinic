@@ -47,15 +47,15 @@ get_header();?>
                     $permalink = get_the_permalink($post->ID);
                     ?>
                     <a href="<?php echo $permalink ?>" class="col mb-5">
-                        <div class="box p-4 p-md-0">
-                            <div class="p-4 text-center">
-                                <h3 class="c-blue h4  text-uppercase"><?php echo $title?></h3>
-                            </div>
-                            <div class="img-hover img-treatment mb-5">
+                        <div class="box">
+                            <div class="img-hover img-treatment mb-3">
                                 <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                 <div class="overlay">
                                     <span class="text cus-href">find out more</span>
                                 </div>
+                            </div>
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
                             </div>
                         </div>
                     </a>

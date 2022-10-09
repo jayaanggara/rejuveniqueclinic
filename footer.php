@@ -8,6 +8,13 @@
 <script src="<?php bloginfo('stylesheet_directory') ;?>/assets/plugins/enllax/jquery.enllax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.min.js"></script>
 <script>
+
+$('.map-container')
+	.click(function(){
+			$(this).find('iframe').addClass('clicked')})
+	.mouseleave(function(){
+			$(this).find('iframe').removeClass('clicked')});
+
 AOS.init();
 $(window).enllax({
 

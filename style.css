@@ -523,19 +523,18 @@ header p{
 
 /* Embedded content with flexible width and proportional height. */
 
-.rwd-media {
-    position: relative;
+  .map-container {
     width: 100%;
-    height: 80vh;
-    
   }
-  
-  .rwd-media iframe{
-    position: absolute;
+  .map-container iframe{
     width: 100%;
-    height: 80vh;  
+    display: block;
+    pointer-events: none;
+    position: relative; /* IE needs a position other than static */
   }
-  
+  .map-container iframe.clicked{
+    pointer-events: auto;
+  }
   
   .contact-form .form-field {
     position: relative;
@@ -554,12 +553,15 @@ header p{
   .contact-form .input-text:focus {
     outline: none;
   }
+  .contact-form .form-field:hover .label{
+    transform: translateY(-35px);
+  }
   .contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
     transform: translateY(-24px);
   }
   .contact-form .label {
     position: absolute;
-    bottom: 11px;
+    bottom: 55px;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -644,12 +646,6 @@ header p{
   border-radius: 0;
 }
 
-.img-treatment img, .img-treatment-archive img{
-  height: 450px;
-  object-fit: cover;
-  
-}
-
 #slider-tret ul li img{
   height: 350px;
   object-fit: cover;
@@ -713,7 +709,8 @@ header p{
 .before-after .photo img {
   display: block;
   max-width: 100%;
-  height: 100%; 
+  height: 350px;
+  object-fit: cover; 
 }
 .before-after .photo.before {
   position: absolute;
@@ -750,12 +747,12 @@ opacity: 1; }
 
 /*# sourceMappingURL=before-after.css.map */
 
+.fs-20{
+  font-size: 20px;
+}
 
 
   @media only screen and (max-width: 991px){
-    .pt-50{
-        padding-top: 0;
-    }
     #navbar{
         margin-top: 0 !important;
     }
@@ -766,11 +763,17 @@ opacity: 1; }
       font-size: 24px;
   }
   .pt-120{
-    padding-top: 50px;
+    padding-top: 65px;
   }
   }
 
   @media only screen and (max-width: 566px){
+    .pt-50{
+      padding-top: 65px;
+    }
+    .fs-20{
+      font-size: 14px;
+    }
     .carousel-control-prev img, .carousel-control-next img{
       width: 40px;
       height: 40px;

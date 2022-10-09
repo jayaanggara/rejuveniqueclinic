@@ -14,8 +14,6 @@ get_header();?>
             <h1 class="c-brown pt-5 pb-3"><?php the_field('title'); ?></h1>
             <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="w-100 pb-4">
 
-            <a href="" class="btn cus-btn-header c-green" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
-
             <div class="content">
                 <div class="pt-5 pb-4">
                     <?php the_content() ?>
@@ -70,7 +68,7 @@ get_header();?>
                 ?>
                 
 
-
+                <a href="" class="btn cus-btn-header c-green" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
             </div>
         </div>
 
@@ -94,19 +92,19 @@ get_header();?>
                         while ( $loop->have_posts() ) : $loop->the_post();
                         $title = get_the_title($post->ID);
                         $deskripsi = get_the_excerpt($post->ID);
-                        $thumbnail =  get_the_post_thumbnail_url($post->ID);
+                        $thumbnail =  get_the_post_thumbnail_url($post->ID, 'news-thumb');
                         $permalink = get_the_permalink($post->ID);
                         ?>
                         <a href="<?php echo $permalink ?>" class="item">
                             <div class="box p-4 p-md-0">
-                                <div class="img-hover img-treatment">
+                                <div class="img-hover img-treatment mb-3">
                                     <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                     <div class="overlay">
                                         <span class="text cus-href">find out more</span>
                                     </div>
                                 </div>
                                 <div class="p-4 text-center">
-                                    <h3 class="c-blue h5 fw-light text-uppercase"><?php echo $title?></h3>
+                                    <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
                                 </div>
                             </div>
                         </a>

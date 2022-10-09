@@ -10,14 +10,17 @@ get_header();?>
 <?php
 $header = get_field('header');
 if( $header ): ?>
-    <header class="header-home" style="background-image: url('<?php echo esc_url( $header['image']['url'] ); ?>')" data-enllax-ratio=".5" data-enllax-direction="vertical">
+    <header class="header-home"  style="background-image: url('<?php if ( wp_is_mobile() ) { echo esc_url( $header['image_mobile']['url'] ); } else { echo esc_url( $header['image']['url'] ); } ?>')" data-enllax-ratio=".5" data-enllax-direction="vertical">
+    <div class="position-relative h-100">
+        <div style="background: rgba(0, 0, 0, 0.5);width: 100%;height: 100%;position: absolute;top: 0;left: 0;"></div>
+    
         <div class="container py-7">
             <div class="col-md-5 container-text ">
-                <span data-aos="fade-up" data-aos-duration="500"><?php echo $header['sec_title']; ?></span>
                 <h1 data-aos="fade-up" data-aos-duration="500"><?php echo $header['title']; ?></h1>
-                <p class="text-white" data-aos="fade-up" data-aos-duration="500"><?php echo $header['deskripsi']; ?></p>
+                <p class="text-white fs-20" data-aos="fade-up" data-aos-duration="500"><?php echo $header['deskripsi']; ?></p>
                 <a href="" class="btn cus-btn-header c-green" data-aos="fade-up" data-aos-duration="500" data-bs-toggle="modal" data-bs-target="#exampleModal"> + make appointment</a>
             </div>
+        </div>
         </div>
     </header>
     <?php endif; ?>
@@ -31,12 +34,16 @@ if( $about ): ?>
         <div class="row align-items-center g-5">
             <div class="col-md-7">
                 <div class="row">
-                <img src="<?php echo esc_url( $about['image_1']['url'] ); ?>" alt="" class="col-6 pt-5" data-aos="fade-up" data-aos-duration="500">
-                <img src="<?php echo esc_url( $about['image_2']['url'] ); ?>" alt="" class="col-6 pb-5" data-aos="fade-up" data-aos-duration="500">
+                <div class="col-6 pt-5">
+                    <img src="<?php echo esc_url( $about['image_1']['url'] ); ?>" alt="" style="width: 100%;border-radius: 10px;" data-aos="fade-up" data-aos-duration="500">
+                </div>
+                <div class="col-6 pb-5">
+                    <img src="<?php echo esc_url( $about['image_2']['url'] ); ?>" alt="" style="width: 100%;border-radius: 10px;" data-aos="fade-up" data-aos-duration="500">
+                </div>
                 </div>
             </div>
             <div class="col-md-5" data-aos="fade-up" data-aos-duration="500">
-                <h2 class="fw-bold"><?php echo $about['title']; ?></h2>
+                <h2 class="fw-bold h1"><?php echo $about['title']; ?></h2>
                 <div class="py-5 mb-0"><?php echo $about['deskripsi']; ?></div>
             </div>
         </div>
@@ -71,14 +78,14 @@ if( $about ): ?>
                     ?>
                     <a href="<?php echo $permalink ?>" class="item">
                         <div class="box p-4 p-md-0">
-                            <div class="p-4 text-center">
-                                <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
-                            </div>
-                            <div class="img-hover img-treatment mb-5">
+                            <div class="img-hover img-treatment mb-3">
                                 <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
                                 <div class="overlay">
                                     <span class="text cus-href">find out more</span>
                                 </div>
+                            </div>
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
                             </div>
                         </div>
                     </a>
@@ -112,7 +119,7 @@ if( $about ): ?>
     </div>
 </section>
 
-<section>
+<section class="d-none">
     <div class="container pt-5 pb-7">
         <div class="row align-items-center py-5" data-aos="fade-up" data-aos-duration="500">
             <div class="col-md-6">
@@ -163,7 +170,7 @@ if( $about ): ?>
     </div>
 </section>
 
-<section style="background-color: #fdfcfa;position:relative;">
+<section class="d-none" style="background-color: #fdfcfa;position:relative;">
 <div class="vl mx-auto"></div>
     <div class="container py-7">
         <div class="col-lg-8 mx-auto">
@@ -220,9 +227,12 @@ if( $about ): ?>
 </section>
 
 <section class="pt-2" data-aos="fade-up" data-aos-duration="500">
-    <div class="rwd-media">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15775.908363190292!2d115.263732!3d-8.693725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdddeea0348344005!2sRejuvenique%20Aesthetics%20Clinic%2C%20Sanur!5e0!3m2!1sid!2sid!4v1660544218397!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container pb-7">
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1-t8vCHmo8f7natFO75EORxyVm9j9mEA&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
     </div>
+    </div>
+
 </section>
 
 <?php get_footer();?>
