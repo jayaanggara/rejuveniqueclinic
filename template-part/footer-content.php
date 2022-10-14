@@ -6,6 +6,7 @@
                 <h2 class="modal-title h4" id="exampleModalLabel">Make Appointment</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <p class="px-4">Please complete these following data for booking. We value your privacy and we use your personal data in order to provide you with our service purpose only.</p>
             <div class="modal-body p-4 pt-0">
                 <?php echo do_shortcode('[contact-form-7 id="125" title="appointment"]')?>
             </div>

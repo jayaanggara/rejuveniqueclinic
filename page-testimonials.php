@@ -14,7 +14,6 @@ get_header();?>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="">
-                    <span data-aos="fade-up" data-aos-duration="500">Rejuvenique</span>
                     <h1 data-aos="fade-up" data-aos-duration="500"><?php echo get_the_title(); ?></h1>
                     <p data-aos="fade-up" data-aos-duration="500"><?php the_field('deskripsi'); ?></p>
                 </div>

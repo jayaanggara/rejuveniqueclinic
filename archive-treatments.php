@@ -30,6 +30,32 @@ get_header();?>
         <div class="col-md-10 mx-auto">
             <div class="row row-cols-md-3 row-cols-2 justify-content-center">
             <?php
+            $select_product = get_field('select_product',68);
+            if($select_product){ ?>
+                <?php foreach( $select_product as $sp ): 
+                    $permalink = get_permalink( $sp->ID );
+                    $title = get_the_title( $sp->ID );
+                    $custom_field = get_field( 'field_name', $sp->ID );
+                    $thumbnail =  get_the_post_thumbnail_url($sp->ID, 'news-thumb');
+                    $thumbnail_custom =  get_field('thumbnail', $sp->ID );
+                    ?>
+                    <a href="<?php echo $permalink ?>" class="col mb-5">
+                        <div class="box">
+                            <div class="img-hover img-treatment mb-3">
+                                <img src="<?php if($thumbnail_custom){ echo $thumbnail_custom['url']; } else { echo $thumbnail; }?>" class="w-100" alt="">
+                                <div class="overlay">
+                                    <span class="text cus-href">find out more</span>
+                                </div>
+                            </div>
+                            <div class="p-4 text-center">
+                                <h3 class="c-blue h4 text-uppercase"><?php echo $title?></h3>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php } else {
+            ?>
+            <?php
                     $args = array(  
                         'post_type' => 'treatments',
                         'post_status' => 'publish',
@@ -45,11 +71,12 @@ get_header();?>
                     $deskripsi = get_the_excerpt($post->ID);
                     $thumbnail =  get_the_post_thumbnail_url($post->ID, 'news-thumb');
                     $permalink = get_the_permalink($post->ID);
+                    $thumbnail_custom =  get_field('thumbnail', $sp->ID );
                     ?>
                     <a href="<?php echo $permalink ?>" class="col mb-5">
                         <div class="box">
                             <div class="img-hover img-treatment mb-3">
-                                <img src="<?php echo $thumbnail ?>" class="w-100" alt="">
+                                <img src="<?php if($thumbnail_custom){ echo $thumbnail_custom['url']; } else { echo $thumbnail; }?>" class="w-100" alt="">
                                 <div class="overlay">
                                     <span class="text cus-href">find out more</span>
                                 </div>
@@ -63,6 +90,7 @@ get_header();?>
                     endwhile;
                 
                     wp_reset_postdata(); 
+                }
                 ?>
                 
             </div>
